@@ -1,0 +1,814 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+
+  <!-- 🌸 CONFIGURACIÓN GENERAL -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pokédex Deluxe 💜</title>
+
+  <!-- 🎀 CONEXIÓN CON CSS -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!--===========================================!-->
+<!--         🌸 1. ENCABEZADO PRINCIPAL       !-->
+<!--==========================================!-->
+
+  <header class="encabezado">
+
+    <h1>🌸 Pokédex Deluxe 🌸</h1>
+    <p>¡Descubre el maravilloso mundo Pokémon!</p>
+
+  </header>
+
+<!--==========================================!-->
+<!--       💜 2. CONTENEDOR PRINCIPAL         !-->
+<!--==========================================!-->
+
+  <main class="contenedor-principal">
+
+    <!-- ======================================
+       🎀 3. MENÚ LATERAL
+    ====================================== -->
+
+    <aside class="menu-lateral">
+      <h2>🗺️ Regiones Pokémon</h2>
+      <div class="lista-regiones">
+
+        <button type="button" class="btn-region" data-region="todas">
+          🌎 Todas las regiones
+        </button>
+
+        <button type="button" class="btn-region" data-region="kanto">
+          🌿 Kanto
+        </button>
+
+        <button type="button" class="btn-region" data-region="johto">
+          🌸 Johto
+        </button>
+
+        <button type="button" class="btn-region" data-region="hoenn">
+          🌊 Hoenn
+        </button>
+
+        <button type="button" class="btn-region" data-region="sinnoh">
+          ⛰️ Sinnoh
+        </button>
+
+        <button type="button" class="btn-region" data-region="unova">
+          🏙️ Teselia
+        </button>
+
+        <button type="button" class="btn-region" data-region="kalos">
+          🌷 Kalos
+        </button>
+
+        <button type="button" class="btn-region" data-region="alola">
+          ☀️ Alola
+        </button>
+
+        <button type="button" class="btn-region" data-region="galar">
+          ⚔️ Galar
+        </button>
+
+        <button type="button" class="btn-region" data-region="paldea">
+          🍊 Paldea
+        </button>
+
+      </div>
+
+      <!-- ✨ SECCIONES ESPECIALES -->
+
+
+
+      <h2>✨ Secciones especiales</h2>
+
+
+
+      <div class="lista-especiales">
+
+
+
+        <button type="button" id="btnMegas">
+
+          💎 Megaevoluciones
+
+        </button>
+
+
+
+        <button type="button" id="btnEvoluciones">
+
+          🌱 Árbol de evoluciones
+
+        </button>
+
+
+
+        <button type="button" id="btnFavoritos">
+
+          ❤️ Mis favoritos
+
+        </button>
+
+
+
+        <button type="button" id="btnAdivina">
+
+          🎮 ¿Quién es ese Pokémon?
+
+        </button>
+
+
+
+      </div>
+
+
+
+    </aside>
+
+
+
+    <!-- ======================================
+
+       🌸 4. ZONA PRINCIPAL DE LA POKÉDEX
+
+    ====================================== -->
+
+
+
+    <div class="contenido-principal">
+
+
+
+      <!-- 🔎 BUSCADOR -->
+
+
+
+      <section class="seccion-buscador">
+
+
+
+        <h2>🔎 Buscar Pokémon</h2>
+
+
+
+        <div class="buscador">
+
+
+
+          <input
+
+            type="text"
+
+            id="buscarPokemon"
+
+            placeholder="Escribe el nombre de un Pokémon..."
+
+            autocomplete="off"
+
+          >
+
+
+
+          <button type="button" id="btnBuscar">
+
+            Buscar 💜
+
+          </button>
+
+
+
+        </div>
+
+
+
+      </section>
+
+
+
+      <!-- ==================================
+
+         🌈 5. FILTROS POR TIPO
+
+      ================================== -->
+
+
+
+      <section class="seccion-tipos">
+
+
+
+        <h2>🌈 Tipos de Pokémon</h2>
+
+
+
+        <div class="lista-tipos">
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="todos">
+
+            🌎 Todos
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="normal">
+
+            ⚪ Normal
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="fire">
+
+            🔥 Fuego
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="water">
+
+            💧 Agua
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="grass">
+
+            🌿 Planta
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="electric">
+
+            ⚡ Eléctrico
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="ice">
+
+            ❄️ Hielo
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="fighting">
+
+            🥊 Lucha
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="poison">
+
+            ☠️ Veneno
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="ground">
+
+            🏜️ Tierra
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="flying">
+
+            🪽 Volador
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="psychic">
+
+            🔮 Psíquico
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="bug">
+
+            🐛 Bicho
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="rock">
+
+            🪨 Roca
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="ghost">
+
+            👻 Fantasma
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="dragon">
+
+            🐉 Dragón
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="dark">
+
+            🌙 Siniestro
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="steel">
+
+            ⚙️ Acero
+
+          </button>
+
+
+
+          <button type="button" class="btn-tipo" data-tipo="fairy">
+
+            🧚 Hada
+
+          </button>
+
+
+
+        </div>
+
+
+
+      </section>
+
+
+
+      <!-- ==================================
+
+         💜 6. TARJETAS POKÉMON
+
+      ================================== -->
+
+
+
+      <section class="seccion-pokemon">
+
+
+
+        <h2>💜 Explora la Pokédex</h2>
+
+
+
+        <!-- Cantidad de Pokémon cargados -->
+
+        <p id="contadorPokemon">
+
+          Preparando tu aventura Pokémon... 🌸
+
+        </p>
+
+
+
+        <!-- JavaScript creará las tarjetas aquí -->
+
+        <div id="listaPokemon" class="pokemon-grid"></div>
+
+
+
+      </section>
+
+
+
+      <!-- ==================================
+
+         🌱 7. ÁRBOL DE EVOLUCIONES
+
+      ================================== -->
+
+
+
+      <section
+
+        id="seccionEvoluciones"
+
+        class="seccion-evoluciones"
+
+        hidden
+
+      >
+
+
+
+        <h2>🌱 Árbol de evoluciones Pokémon</h2>
+
+
+
+        <p>
+
+          ¡Descubre las evoluciones de tus Pokémon favoritos! 💜
+
+        </p>
+
+
+
+        <!-- Buscador especial de evoluciones -->
+
+        <div class="buscador-evoluciones">
+
+<input
+    type="text"
+    id="buscarEvolucion"
+    placeholder="Ejemplo: Eevee, Pikachu, Vulpix..."
+    autocomplete="off"
+    >
+   
+          <button type="button" id="btnBuscarEvolucion">
+
+            🔎 Buscar evolución
+
+          </button>
+
+        </div>
+
+        <!-- Aquí aparecerá la familia evolutiva -->
+
+        <div id="resultadoEvoluciones"></div>
+
+      </section>
+
+      <!-- ==================================
+
+         🎮 8. MINIJUEGO POKÉMON
+
+      ================================== -->
+
+
+
+      <section id="seccionAdivina" hidden>
+
+        <h2>🎮 ¿Quién es ese Pokémon?</h2>
+        <p>
+          ¡Elige tu dificultad y descubre tu rango Pokémon! 💜
+        </p>
+
+        <!-- 🏆 MARCADOR -->
+
+         <!-- 🏆 RONDAS Y PUNTOS -->
+<div id="marcadorAdivina" hidden>
+    <span id="rondaAdivina">🌸 Ronda: 1 de 10</span>
+    <span id="puntosAdivina">🏆 Puntos: 0 de 100</span>
+</div>
+
+<!-- 🎮 SELECCIÓN DE DIFICULTAD -->
+
+<div id="seleccionDificultad">
+
+    <h3>💜 Elige tu dificultad</h3>
+
+    <p>¿Cuántos Pokémon podrás reconocer?</p>
+
+    <button class="btn-dificultad facil"
+            onclick="elegirDificultad('facil')">
+        🌸 Fácil
+        <span>10 Pokémon · 100 puntos</span>
+    </button>
+
+    <button class="btn-dificultad medio"
+            onclick="elegirDificultad('medio')">
+        💜 Medio
+        <span>30 Pokémon · 500 puntos</span>
+    </button>
+
+    <button class="btn-dificultad dificil"
+            onclick="elegirDificultad('dificil')">
+        🔥 Difícil
+        <span>60 Pokémon · 1000 puntos</span>
+    </button>
+
+</div>
+
+        <!-- 👀 ZONA DE PREGUNTAS -->
+
+
+
+        <div id="zonaJuegoAdivina">
+
+
+
+          <h3>👀 ¿Quién es este Pokémon?</h3>
+
+
+
+          <!-- Silueta misteriosa -->
+
+          <img
+
+            id="imagenAdivina"
+
+            alt="Silueta de un Pokémon misterioso"
+
+            width="200"
+
+            height="200"
+
+            hidden
+
+          >
+
+
+
+          <!-- Tres opciones posibles -->
+
+          <div id="opcionesAdivina">
+
+
+
+            <button
+
+              type="button"
+
+              class="opcion-pokemon"
+
+              disabled
+
+            >
+
+              🌸 Opción A
+
+            </button>
+
+
+
+            <button
+
+              type="button"
+
+              class="opcion-pokemon"
+
+              disabled
+
+            >
+
+              💜 Opción B
+
+            </button>
+
+
+
+            <button
+
+              type="button"
+
+              class="opcion-pokemon"
+
+              disabled
+
+            >
+
+              🎀 Opción C
+
+            </button>
+
+
+
+          </div>
+
+
+
+          <!-- Mensaje de respuesta -->
+
+          <p id="mensajeAdivina" aria-live="polite"></p>
+
+
+
+          <!-- Siguiente ronda -->
+
+          <button
+
+            type="button"
+
+            id="btnSiguienteAdivina"
+
+            hidden
+
+          >
+
+            🎲 Siguiente Pokémon
+
+          </button>
+
+
+
+        </div>
+
+
+
+        <!-- ==================================
+
+           🏆 9. RESULTADOS FINALES
+
+        ================================== -->
+
+
+
+        <div id="resultadoFinalAdivina" hidden>
+
+
+
+          <h2>🏆 ¡Partida terminada!</h2>
+
+
+
+          <h3 id="puntuacionFinalAdivina"></h3>
+
+
+
+          <h3 id="rangoFinalAdivina"></h3>
+
+
+
+          <p id="fraseFinalAdivina"></p>
+
+
+
+          <!-- 🎀 TABLA DE RANGOS -->
+
+
+
+          <h3>🎀 Tabla de rangos Pokémon</h3>
+
+
+
+          <table>
+
+
+
+            <thead>
+
+              <tr>
+
+                <th>Puntos</th>
+
+                <th>Rango</th>
+
+              </tr>
+
+            </thead>
+
+
+
+            <tbody>
+
+
+
+              <tr>
+
+                <td>100</td>
+
+                <td>👑 Maestro Pokémon</td>
+
+              </tr>
+
+
+
+              <tr>
+
+                <td>80 - 90</td>
+
+                <td>🏆 Campeón Pokémon</td>
+
+              </tr>
+
+
+
+              <tr>
+
+                <td>60 - 70</td>
+
+                <td>🌟 Entrenador experto</td>
+
+              </tr>
+
+
+
+              <tr>
+
+                <td>40 - 50</td>
+
+                <td>🎀 Gran entrenador</td>
+
+              </tr>
+
+
+
+              <tr>
+
+                <td>20 - 30</td>
+
+                <td>🌱 Entrenador en progreso</td>
+
+              </tr>
+
+
+
+              <tr>
+
+                <td>10</td>
+
+                <td>🐣 Entrenador principiante</td>
+
+              </tr>
+
+
+
+              <tr>
+
+                <td>0</td>
+
+                <td>💤 Magikarp despistado</td>
+
+              </tr>
+
+
+
+            </tbody>
+
+
+
+          </table>
+
+
+
+          <!-- Volver a jugar -->
+
+          <button type="button" id="btnReiniciarAdivina">
+
+            🔄 Jugar otra vez
+
+          </button>
+
+
+
+        </div>
+
+
+
+      </section>
+
+
+
+    </div>
+
+
+
+  </main>
+
+
+
+  <!-- ==========================================
+
+     💜 10. CONEXIÓN CON JAVASCRIPT
+
+  ========================================== -->
+
+
+
+  <script src="script.js" defer></script>
+
+
+
+</body>
+
+</html>

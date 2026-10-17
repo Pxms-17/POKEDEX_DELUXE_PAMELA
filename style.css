@@ -1,0 +1,1433 @@
+
+/* ==========================================
+   🌸 POKÉDEX DELUXE - CSS CORREGIDO
+   💜 Diseño kawaii rosa, lila y morado
+   ========================================== */
+
+/* 🌷 1. CONFIGURACIÓN GENERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #FFF1F8, #FAF5FF);
+  color: #69358D;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover {
+  filter: brightness(0.96);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* 🎀 2. ENCABEZADO */
+
+body > header,
+.encabezado,
+.encabezado-principal,
+.header {
+  width: min(1400px, 96%);
+  margin: 22px auto 26px;
+  padding: 32px 20px;
+  background: linear-gradient(
+    135deg,
+    #FBCFE8 0%,
+    #E9D5FF 55%,
+    #DDD6FE 100%
+  );
+  border: 2px solid #F5D0FE;
+  border-radius: 26px;
+  box-shadow: 0 8px 25px #C084FC30;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 12px;
+  color: #7E22CE;
+  font-size: clamp(28px, 4vw, 43px);
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 2px 2px 0 #FFFFFF;
+}
+
+body > header p,
+.encabezado p,
+.encabezado-principal p,
+.header p {
+  margin: 0;
+  color: #9333EA;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* 💜 3. CONTENEDOR PRINCIPAL */
+
+.contenedor-principal {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  width: min(1400px, 96%);
+  margin: 24px auto;
+}
+
+.contenido-principal {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+/* 🌸 4. MENÚ LATERAL */
+
+.menu-lateral {
+  width: 245px;
+  flex-shrink: 0;
+  padding: 22px 18px;
+  background: #FFFFFF;
+  border: 2px solid #E9D5FF;
+  border-radius: 24px;
+  box-shadow: 0 6px 20px #C084FC20;
+}
+
+.menu-lateral h2,
+.menu-lateral h3 {
+  margin: 15px 0 20px;
+  color: #9333EA;
+  text-align: center;
+}
+
+.menu-lateral .btn-region,
+.menu-lateral #btnMegas,
+.menu-lateral #btnEvoluciones,
+.menu-lateral #btnFavoritos,
+.menu-lateral #btnAdivina {
+  display: block;
+  width: 100%;
+  margin: 9px 0;
+  padding: 12px 13px;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  font-weight: 700;
+  box-shadow: 0 3px 8px #A78BFA18;
+}
+
+/* 🗺️ 5. COLORES DE LAS REGIONES */
+
+.btn-region[data-region="todas"] {
+  background: #E9D5FF;
+  color: #6B21A8;
+  border-color: #C084FC;
+}
+
+.btn-region[data-region="kanto"] {
+  background: #FCE7F3;
+  color: #BE185D;
+  border-color: #F9A8D4;
+}
+
+.btn-region[data-region="johto"] {
+  background: #F3E8FF;
+  color: #7E22CE;
+  border-color: #D8B4FE;
+}
+
+.btn-region[data-region="hoenn"] {
+  background: #DBEAFE;
+  color: #1D4ED8;
+  border-color: #93C5FD;
+}
+
+.btn-region[data-region="sinnoh"] {
+  background: #EDE9FE;
+  color: #5B21B6;
+  border-color: #C4B5FD;
+}
+
+.btn-region[data-region="unova"] {
+  background: #E0F2FE;
+  color: #0369A1;
+  border-color: #7DD3FC;
+}
+
+.btn-region[data-region="kalos"] {
+  background: #FCE7F3;
+  color: #9D174D;
+  border-color: #F9A8D4;
+}
+
+.btn-region[data-region="alola"] {
+  background: #FEF3C7;
+  color: #92400E;
+  border-color: #FCD34D;
+}
+
+.btn-region[data-region="galar"] {
+  background: #E0E7FF;
+  color: #4338CA;
+  border-color: #A5B4FC;
+}
+
+.btn-region[data-region="paldea"] {
+  background: #FFEDD5;
+  color: #C2410C;
+  border-color: #FDBA74;
+}
+
+/* 💎 6. BOTONES ESPECIALES */
+
+.menu-lateral #btnMegas {
+  background: #EDE9FE;
+  color: #6D28D9;
+  border-color: #C4B5FD;
+}
+
+.menu-lateral #btnEvoluciones {
+  background: #DCFCE7;
+  color: #166534;
+  border-color: #86EFAC;
+}
+
+.menu-lateral #btnFavoritos {
+  background: #FCE7F3;
+  color: #BE185D;
+  border-color: #F9A8D4;
+}
+
+.menu-lateral #btnAdivina {
+  background: #DBEAFE;
+  color: #1D4ED8;
+  border-color: #93C5FD;
+}
+
+/* ✨ 7. ANIMACIONES DEL MENÚ */
+
+.menu-lateral button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 14px #A78BFA35;
+}
+
+.menu-lateral button:active {
+  transform: scale(0.97);
+}
+
+/* 🌷 8. TÍTULOS */
+
+.contenido-principal h2 {
+  margin: 22px 0 18px;
+  color: #7E22CE;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* 🔎 9. BUSCADORES */
+
+#buscarPokemon,
+#buscarEvolucion {
+  display: inline-block;
+  width: min(100%, 420px);
+  padding: 13px 16px;
+  border: 2px solid #E9D5FF;
+  border-radius: 15px;
+  background: #FFFFFF;
+  color: #69358D;
+  outline: none;
+}
+
+#buscarPokemon:focus,
+#buscarEvolucion:focus {
+  border-color: #C084FC;
+  box-shadow: 0 0 0 4px #E9D5FF80;
+}
+
+#btnBuscar,
+#btnBuscarEvolucion {
+  display: inline-block;
+  margin: 5px 0;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #C084FC, #A855F7);
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+#btnBuscar:hover,
+#btnBuscarEvolucion:hover {
+  transform: translateY(-2px);
+}
+
+/* 🌈 10. LISTA DE TIPOS */
+
+.lista-tipos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1050px;
+  margin: 20px auto 30px;
+}
+
+.btn-tipo {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  background: #E9D5FF;
+  color: #6B21A8;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.btn-tipo:hover {
+  transform: translateY(-3px);
+  filter: brightness(0.94);
+}
+
+/* 🎨 11. COLORES DE LOS 18 TIPOS */
+
+.btn-tipo[data-tipo="todos"] {
+  background: #E9D5FF;
+  color: #6B21A8;
+}
+
+.btn-tipo[data-tipo="normal"],
+.pokemon-tipo.normal {
+  background: #E7DCCF;
+  color: #6B5A48;
+}
+
+.btn-tipo[data-tipo="fire"],
+.pokemon-tipo.fire {
+  background: #FFD1C2;
+  color: #C2410C;
+}
+
+.btn-tipo[data-tipo="water"],
+.pokemon-tipo.water {
+  background: #BFDBFE;
+  color: #1D4ED8;
+}
+
+.btn-tipo[data-tipo="grass"],
+.pokemon-tipo.grass {
+  background: #BBF7D0;
+  color: #166534;
+}
+
+.btn-tipo[data-tipo="electric"],
+.pokemon-tipo.electric {
+  background: #FEF08A;
+  color: #854D0E;
+}
+
+.btn-tipo[data-tipo="ice"],
+.pokemon-tipo.ice {
+  background: #CFFAFE;
+  color: #0E7490;
+}
+
+.btn-tipo[data-tipo="fighting"],
+.pokemon-tipo.fighting {
+  background: #FECACA;
+  color: #991B1B;
+}
+
+.btn-tipo[data-tipo="poison"],
+.pokemon-tipo.poison {
+  background: #E9D5FF;
+  color: #7E22CE;
+}
+
+.btn-tipo[data-tipo="ground"],
+.pokemon-tipo.ground {
+  background: #FDE68A;
+  color: #92400E;
+}
+
+.btn-tipo[data-tipo="flying"],
+.pokemon-tipo.flying {
+  background: #DDD6FE;
+  color: #5B21B6;
+}
+
+.btn-tipo[data-tipo="psychic"],
+.pokemon-tipo.psychic {
+  background: #FBCFE8;
+  color: #BE185D;
+}
+
+.btn-tipo[data-tipo="bug"],
+.pokemon-tipo.bug {
+  background: #D9F99D;
+  color: #3F6212;
+}
+
+.btn-tipo[data-tipo="rock"],
+.pokemon-tipo.rock {
+  background: #D6D3D1;
+  color: #57534E;
+}
+
+.btn-tipo[data-tipo="ghost"],
+.pokemon-tipo.ghost {
+  background: #C4B5FD;
+  color: #5B21B6;
+}
+
+.btn-tipo[data-tipo="dragon"],
+.pokemon-tipo.dragon {
+  background: #C7D2FE;
+  color: #3730A3;
+}
+
+.btn-tipo[data-tipo="dark"],
+.pokemon-tipo.dark {
+  background: #D6D3D1;
+  color: #292524;
+}
+
+.btn-tipo[data-tipo="steel"],
+.pokemon-tipo.steel {
+  background: #CBD5E1;
+  color: #334155;
+}
+
+.btn-tipo[data-tipo="fairy"],
+.pokemon-tipo.fairy {
+  background: #FBCFE8;
+  color: #9D174D;
+}
+
+/* 💜 12. CONTADOR Y CUADRÍCULA */
+
+#contadorPokemon {
+  margin: 20px 0;
+  color: #9333EA;
+  font-weight: bold;
+  text-align: center;
+}
+
+#listaPokemon {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 18px;
+  padding: 16px 0;
+}
+
+/* 🌸 13. TARJETAS POKÉMON */
+
+.pokemon-card {
+  min-width: 0;
+  padding: 20px 14px;
+  background: #FFFFFF;
+  border: 2px solid #F5D0FE;
+  border-radius: 22px;
+  box-shadow: 0 5px 16px #C084FC25;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px #C084FC35;
+}
+
+.pokemon-numero {
+  margin: 0 0 8px;
+  color: #A78BFA;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.pokemon-imagen {
+  display: block;
+  width: 135px;
+  height: 135px;
+  max-width: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.pokemon-nombre {
+  margin: 12px 0 8px;
+  color: #7E22CE;
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+/* 🌈 14. ETIQUETAS DE TIPOS */
+
+.pokemon-tipos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.pokemon-tipo {
+  display: inline-block;
+  padding: 6px 11px;
+  border-radius: 20px;
+  background: #E9D5FF;
+  color: #6B21A8;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* 🎨 15. FONDOS PASTEL POR TIPO */
+
+/* Cada tarjeta tiene un color suave diferente. */
+
+.pokemon-card:has(.pokemon-tipo.normal) {
+  background: #F5F0E8;
+  border-color: #D6C8B5;
+}
+
+.pokemon-card:has(.pokemon-tipo.fire) {
+  background: #FFEDD5;
+  border-color: #FDBA74;
+}
+
+.pokemon-card:has(.pokemon-tipo.water) {
+  background: #DBEAFE;
+  border-color: #93C5FD;
+}
+
+.pokemon-card:has(.pokemon-tipo.grass) {
+  background: #DCFCE7;
+  border-color: #86EFAC;
+}
+
+.pokemon-card:has(.pokemon-tipo.electric) {
+  background: #FEF9C3;
+  border-color: #FDE047;
+}
+
+.pokemon-card:has(.pokemon-tipo.ice) {
+  background: #ECFEFF;
+  border-color: #67E8F9;
+}
+
+.pokemon-card:has(.pokemon-tipo.fighting) {
+  background: #FEE2E2;
+  border-color: #FCA5A5;
+}
+
+.pokemon-card:has(.pokemon-tipo.poison) {
+  background: #F3E8FF;
+  border-color: #D8B4FE;
+}
+
+.pokemon-card:has(.pokemon-tipo.ground) {
+  background: #FEF3C7;
+  border-color: #FCD34D;
+}
+
+.pokemon-card:has(.pokemon-tipo.flying) {
+  background: #EDE9FE;
+  border-color: #C4B5FD;
+}
+
+.pokemon-card:has(.pokemon-tipo.psychic) {
+  background: #FCE7F3;
+  border-color: #F9A8D4;
+}
+
+.pokemon-card:has(.pokemon-tipo.bug) {
+  background: #ECFCCB;
+  border-color: #BEF264;
+}
+
+.pokemon-card:has(.pokemon-tipo.rock) {
+  background: #F5F5F4;
+  border-color: #D6D3D1;
+}
+
+.pokemon-card:has(.pokemon-tipo.ghost) {
+  background: #EDE9FE;
+  border-color: #C4B5FD;
+}
+
+.pokemon-card:has(.pokemon-tipo.dragon) {
+  background: #E0E7FF;
+  border-color: #A5B4FC;
+}
+
+.pokemon-card:has(.pokemon-tipo.dark) {
+  background: #E7E5E4;
+  border-color: #A8A29E;
+}
+
+.pokemon-card:has(.pokemon-tipo.steel) {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+}
+
+.pokemon-card:has(.pokemon-tipo.fairy) {
+  background: #FCE7F3;
+  border-color: #F9A8D4;
+}
+
+/* 🌷 16. POKÉMON DE DOS TIPOS */
+
+.pokemon-card:has(.pokemon-tipo.grass):has(.pokemon-tipo.poison) {
+  background: linear-gradient(135deg, #DCFCE7, #F3E8FF);
+  border-color: #C4B5FD;
+}
+
+.pokemon-card:has(.pokemon-tipo.fire):has(.pokemon-tipo.flying) {
+  background: linear-gradient(135deg, #FFEDD5, #EDE9FE);
+  border-color: #FDBA74;
+}
+
+.pokemon-card:has(.pokemon-tipo.water):has(.pokemon-tipo.flying) {
+  background: linear-gradient(135deg, #DBEAFE, #EDE9FE);
+  border-color: #93C5FD;
+}
+
+.pokemon-card:has(.pokemon-tipo.water):has(.pokemon-tipo.ground) {
+  background: linear-gradient(135deg, #DBEAFE, #FEF3C7);
+  border-color: #93C5FD;
+}
+
+.pokemon-card:has(.pokemon-tipo.electric):has(.pokemon-tipo.flying) {
+  background: linear-gradient(135deg, #FEF9C3, #EDE9FE);
+  border-color: #FDE047;
+}
+
+.pokemon-card:has(.pokemon-tipo.ghost):has(.pokemon-tipo.poison) {
+  background: linear-gradient(135deg, #EDE9FE, #F3E8FF);
+  border-color: #C4B5FD;
+}
+
+.pokemon-card:has(.pokemon-tipo.psychic):has(.pokemon-tipo.fairy) {
+  background: linear-gradient(135deg, #FCE7F3, #FDF2F8);
+  border-color: #F9A8D4;
+}
+
+.pokemon-card:has(.pokemon-tipo.dragon):has(.pokemon-tipo.flying) {
+  background: linear-gradient(135deg, #E0E7FF, #EDE9FE);
+  border-color: #A5B4FC;
+}
+
+/* ❤️ 17. FAVORITOS Y SONIDOS */
+
+.pokemon-acciones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn-favorito,
+.btn-sonido {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #F5D0FE;
+  border-radius: 50%;
+  background: #FFF1F8;
+  font-size: 19px;
+}
+
+.btn-favorito:hover,
+.btn-sonido:hover {
+  background: #F3E8FF;
+  transform: scale(1.08);
+}
+
+/* 🌱 18. ÁRBOL DE EVOLUCIONES */
+
+#seccionEvoluciones {
+  padding: 25px;
+  background: #FFFFFF;
+  border: 2px solid #E9D5FF;
+  border-radius: 24px;
+  text-align: center;
+}
+
+#resultadoEvoluciones {
+  margin-top: 25px;
+}
+
+.arbol-evoluciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 20px;
+}
+
+.tarjeta-evolucion {
+  width: 150px;
+  padding: 15px;
+  background: #FFF1F8;
+  border: 2px solid #E9D5FF;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px #C084FC20;
+  text-align: center;
+}
+
+.tarjeta-evolucion img {
+  display: block;
+  width: 110px;
+  height: 110px;
+  max-width: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.tarjeta-evolucion h3 {
+  margin: 10px 0 0;
+  color: #7E22CE;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   🎮 19. MINIJUEGO POKÉMON
+   ========================================== */
+
+/* 🌸 FONDO PRINCIPAL */
+
+#seccionAdivina {
+    padding: 25px;
+    background: linear-gradient(135deg, #FFF0F8, #F3E8FF, #EAF4FF);
+    border: 2px solid #D8B4FE;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 6px 18px #C084FC25;
+}
+
+/* 💜 TÍTULO */
+
+#seccionAdivina h2 {
+    color: #9333EA;
+    text-shadow: 1px 2px 3px #E9D5FF;
+}
+
+/* 🎀 ZONA DEL JUEGO */
+
+#zonaJuegoAdivina {
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* 🌸 RONDAS */
+
+#rondaAdivina {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 6px;
+    background: #FCE7F3;
+    color: #BE185D;
+    border: 2px solid #F9A8D4;
+    border-radius: 14px;
+    font-weight: bold;
+}
+
+/* 🏆 PUNTOS */
+
+#puntosAdivina {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 6px;
+    background: #FEF3C7;
+    color: #A16207;
+    border: 2px solid #FCD34D;
+    border-radius: 14px;
+    font-weight: bold;
+}
+
+/* 🩵 IMAGEN DEL POKÉMON */
+
+#imagenAdivina {
+    display: block;
+    width: 220px;
+    height: 220px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 12px;
+    object-fit: contain;
+
+    background: #F5EEFF;
+    border: 2px solid #E9D5FF;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #C084FC25;
+}
+
+/* 🎀 OPCIONES A TODO EL ANCHO */
+
+#opcionesAdivina {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* 🌷 BOTONES DE RESPUESTA */
+
+#opcionesAdivina .opcion-pokemon {
+    display: block;
+    width: 100%;
+    min-height: 60px;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+/* 💗 PRIMERA OPCIÓN */
+
+#opcionesAdivina .opcion-pokemon:nth-child(1) {
+    background: #FBCFE8;
+    color: #9D174D;
+    border: 2px solid #F9A8D4;
+}
+
+/* 💜 SEGUNDA OPCIÓN */
+
+#opcionesAdivina .opcion-pokemon:nth-child(2) {
+    background: #DDD6FE;
+    color: #6D28D9;
+    border: 2px solid #C4B5FD;
+}
+
+/* 🩵 TERCERA OPCIÓN */
+
+#opcionesAdivina .opcion-pokemon:nth-child(3) {
+    background: #CFFAFE;
+    color: #0E7490;
+    border: 2px solid #67E8F9;
+}
+
+/* ✨ EFECTO AL PASAR EL MOUSE */
+
+#opcionesAdivina .opcion-pokemon:hover:not(:disabled) {
+    transform: translateY(-3px);
+    filter: brightness(0.97);
+    box-shadow: 0 4px 12px #C084FC30;
+}
+
+/* 🌸 MENSAJES */
+
+#mensajeAdivina {
+    margin: 15px 0;
+    color: #9333EA;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* 🎀 BOTONES SIGUIENTE Y REINICIAR */
+
+#btnSiguienteAdivina,
+#btnReiniciarAdivina {
+    padding: 13px 25px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #C084FC, #F472B6);
+    color: white;
+    font-weight: bold;
+}
+
+/* ✨ EFECTO DE LOS BOTONES */
+
+#btnSiguienteAdivina:hover,
+#btnReiniciarAdivina:hover {
+    background: linear-gradient(90deg, #A855F7, #EC4899);
+}
+
+/* 🌷 RESULTADO FINAL */
+#resultadoFinalAdivina {
+    width: 100%;
+    padding: 30px 20px;
+    margin: 20px auto;
+
+    background: #FFF5FC;
+    border: 2px solid #FBCFE8;
+    border-radius: 25px;
+
+    text-align: center;
+    box-shadow: 0 6px 18px #F9A8D425;
+}
+
+/* 🏆 TABLA DE RANGOS CENTRADA */
+
+#resultadoFinalAdivina table {
+    width: 100%;
+    max-width: 650px;
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+
+    background: white;
+    border: 2px solid #E9D5FF;
+    border-radius: 16px;
+}
+
+/* 💜 ENCABEZADO DE LA TABLA */
+
+#resultadoFinalAdivina th {
+    background: #E9D5FF;
+    color: #6B21A8;
+    padding: 14px;
+    text-align: center;
+}
+
+/* 🌸 FILAS DE LA TABLA */
+
+#resultadoFinalAdivina td {
+    padding: 12px;
+    color: #69358D;
+    text-align: center;
+    border-bottom: 1px solid #F3E8FF;
+}
+
+/* 🎀 FILAS ALTERNADAS */
+
+#resultadoFinalAdivina tr:nth-child(even) td {
+    background: #FFF1F8;
+}
+
+#resultadoFinalAdivina tr:nth-child(odd) td {
+    background: #FAF5FF;
+}
+
+/* ✨ ÚLTIMA FILA */
+
+#resultadoFinalAdivina tr:last-child td {
+    border-bottom: none;
+}
+
+/* 🏆 PUNTUACIÓN FINAL */
+
+#puntuacionFinalAdivina {
+    color: #9333EA;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+/* 💗 RANGO FINAL */
+
+#rangoFinalAdivina {
+    color: #DB2777;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* =====================================
+   🎮 SELECCIÓN DE DIFICULTAD
+   ===================================== */
+
+#seleccionDificultad {
+    width: 100%;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #FFF5FC;
+    border: 2px solid #E9D5FF;
+    border-radius: 22px;
+    text-align: center;
+}
+
+#seleccionDificultad h3 {
+    color: #9333EA;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#seleccionDificultad p {
+    color: #9D5DB4;
+    margin-bottom: 20px;
+}
+
+.btn-dificultad {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    padding: 18px;
+    border-radius: 16px;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-dificultad span {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+/* 🌸 FÁCIL */
+
+.btn-dificultad.facil {
+    background: #FBCFE8;
+    color: #9D174D;
+    border: 2px solid #F9A8D4;
+}
+
+/* 💜 MEDIO */
+
+.btn-dificultad.medio {
+    background: #DDD6FE;
+    color: #6D28D9;
+    border: 2px solid #C4B5FD;
+}
+
+/* 🔥 DIFÍCIL */
+
+.btn-dificultad.dificil {
+    background: #CFFAFE;
+    color: #0E7490;
+    border: 2px solid #67E8F9;
+}
+
+.btn-dificultad:hover {
+    transform: translateY(-3px);
+    filter: brightness(0.97);
+}
+
+/* OCULTAR LAS PANTALLAS QUE NO SE USAN */
+
+#seccionAdivina [hidden] {
+    display: none !important;
+}
+
+/* ==========================================
+   🌸 20. VENTANITA DE INFORMACIÓN POKÉMON
+   Compatible con el JavaScript corregido
+   ========================================== */
+
+/* 💜 FONDO OSCURO TRANSPARENTE */
+
+#modalInfoPokemon {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(49, 23, 72, 0.65);
+  backdrop-filter: blur(6px);
+}
+
+#modalInfoPokemon[hidden] {
+  display: none !important;
+}
+
+/* 🎀 CONTENEDOR DE LA VENTANA */
+
+.modal-info-contenido {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px 25px;
+  border: 3px solid #E5B7FF;
+  border-radius: 28px;
+  background: linear-gradient(
+    145deg,
+    #FFF0FA,
+    #F4E8FF,
+    #E9DDFF
+  );
+  box-shadow: 0 15px 45px rgba(88, 36, 128, 0.35);
+  text-align: center;
+  animation: aparecerInfoPokemon 0.25s ease;
+}
+
+@keyframes aparecerInfoPokemon {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ❌ BOTÓN CERRAR */
+
+#cerrarInfoPokemon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #E9C5FF;
+  color: #713D91;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#cerrarInfoPokemon:hover {
+  background: #D9A4FF;
+  transform: scale(1.1);
+}
+
+/* 🔢 NÚMERO */
+
+.info-numero {
+  margin: 5px 0 10px;
+  color: #A879C4;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 🖼️ IMAGEN */
+
+.info-imagen {
+  display: block;
+  width: 190px;
+  height: 190px;
+  max-width: 100%;
+  margin: 0 auto 10px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 8px rgba(145, 90, 180, 0.18));
+}
+
+/* 💜 NOMBRE */
+
+.info-nombre {
+  margin: 10px 0 15px;
+  color: #8244A5;
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+/* 🌈 TIPOS DE LA VENTANA */
+
+.modal-info-contenido .pokemon-tipos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-info-contenido .pokemon-tipo {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* 📖 DESCRIPCIÓN */
+
+.info-descripcion {
+  padding: 16px;
+  margin: 15px 0 20px;
+  border: 2px solid #EFD4FF;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #704E83;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* 📏 DATOS GENERALES */
+
+.info-datos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.info-datos > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 15px 10px;
+  border: 2px solid #EED4FF;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.info-datos span {
+  color: #A06AB9;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.info-datos strong {
+  color: #724093;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+/* ✨ TÍTULOS */
+
+.modal-info-contenido h3 {
+  margin: 25px 0 15px;
+  color: #8647A8;
+  font-size: 20px;
+}
+
+/* 🎀 HABILIDADES */
+
+.info-habilidades {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.info-habilidad {
+  padding: 9px 15px;
+  border: 2px solid #E9C9FF;
+  border-radius: 18px;
+  background: #F9E8FF;
+  color: #8549A4;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* 📊 ESTADÍSTICAS */
+
+.info-estadisticas {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: 15px;
+}
+
+.info-stat-fila {
+  display: grid;
+  grid-template-columns: 115px minmax(0, 1fr) 35px;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.info-stat-fila span {
+  color: #754992;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.info-stat-fila strong {
+  color: #754992;
+  font-size: 13px;
+  text-align: right;
+}
+
+/* 🌈 BARRAS DE ESTADÍSTICAS */
+
+.info-stat-barra {
+  height: 12px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #EADCF3;
+}
+
+.info-stat-barra > div {
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    #F5A8D7,
+    #C38DF4,
+    #9F8DF7
+  );
+  transition: width 0.4s ease;
+}
+
+/* ⏳ CARGANDO */
+
+.info-cargando {
+  padding: 40px 10px;
+  color: #8955A5;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* ==========================================
+   📱 21. DISEÑO RESPONSIVE PARA TABLET
+   ========================================== */
+
+@media (max-width: 850px) {
+  .contenedor-principal {
+    flex-direction: column;
+  }
+
+  .menu-lateral {
+    width: 100%;
+  }
+
+  .contenido-principal {
+    width: 100%;
+  }
+
+  #listaPokemon {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(155px, 1fr)
+    );
+  }
+}
+
+/* ==========================================
+   📱 22. DISEÑO PARA CELULARES
+   ========================================== */
+
+@media (max-width: 550px) {
+  body > header,
+  .encabezado,
+  .encabezado-principal,
+  .header {
+    padding: 22px 12px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .contenedor-principal {
+    width: 94%;
+    gap: 14px;
+  }
+
+  .menu-lateral,
+  #seccionEvoluciones,
+  #seccionAdivina {
+    padding: 15px;
+  }
+
+  #buscarPokemon,
+  #buscarEvolucion {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #btnBuscar,
+  #btnBuscarEvolucion {
+    width: 100%;
+  }
+
+  .lista-tipos {
+    gap: 7px;
+  }
+
+  .btn-tipo {
+    padding: 8px 11px;
+    font-size: 12px;
+  }
+
+  #listaPokemon {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .pokemon-card {
+    padding: 14px 8px;
+  }
+
+  .pokemon-imagen {
+    width: 110px;
+    height: 110px;
+  }
+
+  .pokemon-nombre {
+    font-size: 15px;
+  }
+
+  .pokemon-tipo {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+
+  .arbol-evoluciones {
+    flex-direction: column;
+  }
+
+  #imagenAdivina {
+    width: 180px;
+    height: 180px;
+  }
+
+  .modal-info-contenido {
+    padding: 25px 15px;
+    border-radius: 22px;
+  }
+
+  .info-imagen {
+    width: 150px;
+    height: 150px;
+  }
+
+  .info-nombre {
+    font-size: 25px;
+  }
+
+  .info-stat-fila {
+    grid-template-columns: 95px minmax(0, 1fr) 30px;
+    gap: 7px;
+  }
+
+  .info-stat-fila span {
+    font-size: 11px;
+  }
+
+  .info-datos {
+    gap: 8px;
+  }
+}
+
+/* ==========================================
+   💜 FIN DEL CSS - POKÉDEX DELUXE
+   🌸 Diseño kawaii corregido
+   ========================================== */
